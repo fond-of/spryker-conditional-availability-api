@@ -143,7 +143,9 @@ class ConditionalAvailabilityApi implements ConditionalAvailabilityApiInterface
     }
 
     /**
-     * @inheritDoc
+     * @param \Generated\Shared\Transfer\ApiRequestTransfer $apiRequestTransfer
+     *
+     * @return \Generated\Shared\Transfer\ApiCollectionTransfer
      */
     public function find(ApiRequestTransfer $apiRequestTransfer): ApiCollectionTransfer
     {
