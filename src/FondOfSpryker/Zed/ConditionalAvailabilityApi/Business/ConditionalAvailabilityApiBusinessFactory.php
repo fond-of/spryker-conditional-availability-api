@@ -16,6 +16,7 @@ use Spryker\Zed\Kernel\Business\AbstractBusinessFactory;
 
 /**
  * @method \FondOfSpryker\Zed\ConditionalAvailabilityApi\Persistence\ConditionalAvailabilityApiQueryContainerInterface getQueryContainer()
+ * @method \FondOfSpryker\Zed\ConditionalAvailabilityApi\ConditionalAvailabilityApiConfig getConfig()
  */
 class ConditionalAvailabilityApiBusinessFactory extends AbstractBusinessFactory
 {
