@@ -32,6 +32,11 @@ class ConditionalAvailabilityApiDependencyProvider extends AbstractBundleDepende
         return $container;
     }
 
+    /**
+     * @param \Spryker\Zed\Kernel\Container $container
+     *
+     * @return \Spryker\Zed\Kernel\Container
+     */
     public function providePersistenceLayerDependencies(Container $container): Container
     {
         $container = parent::providePersistenceLayerDependencies($container);
@@ -48,7 +53,7 @@ class ConditionalAvailabilityApiDependencyProvider extends AbstractBundleDepende
      */
     protected function addConditionalAvailabilityFacade(Container $container): Container
     {
-        $container[static::FACADE_CONDITIONAL_AVAILABILITY] = function (Container $container) {
+        $container[static::FACADE_CONDITIONAL_AVAILABILITY] = static function (Container $container) {
             return new ConditionalAvailabilityApiToConditionalAvailabilityFacadeBridge(
                 $container->getLocator()->conditionalAvailability()->facade()
             );
@@ -64,7 +69,7 @@ class ConditionalAvailabilityApiDependencyProvider extends AbstractBundleDepende
      */
     protected function provideApiQueryContainer(Container $container): Container
     {
-        $container[static::QUERY_CONTAINER_API] = function (Container $container) {
+        $container[static::QUERY_CONTAINER_API] = static function (Container $container) {
             return new ConditionalAvailabilityApiToApiQueryContainerBridge(
                 $container->getLocator()->api()->queryContainer()
             );
@@ -80,7 +85,7 @@ class ConditionalAvailabilityApiDependencyProvider extends AbstractBundleDepende
      */
     protected function provideApiQueryBuilderQueryContainer(Container $container): Container
     {
-        $container[static::QUERY_CONTAINER_API_QUERY_BUILDER] = function (Container $container) {
+        $container[static::QUERY_CONTAINER_API_QUERY_BUILDER] = static function (Container $container) {
             return new ConditionalAvailabilityApiToApiQueryBuilderQueryContainerBridge(
                 $container->getLocator()->apiQueryBuilder()->queryContainer()
             );
@@ -96,7 +101,7 @@ class ConditionalAvailabilityApiDependencyProvider extends AbstractBundleDepende
      */
     protected function addConditionalAvailabilityPropelQuery(Container $container): Container
     {
-        $container[static::PROPEL_QUERY_CONDITIONAL_AVAILABILITY] = function (Container $container) {
+        $container[static::PROPEL_QUERY_CONDITIONAL_AVAILABILITY] = static function (Container $container) {
             return FosConditionalAvailabilityQuery::create();
         };
 
