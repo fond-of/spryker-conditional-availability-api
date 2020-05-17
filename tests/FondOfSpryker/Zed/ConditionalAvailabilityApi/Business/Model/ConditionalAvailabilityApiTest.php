@@ -132,8 +132,6 @@ class ConditionalAvailabilityApiTest extends Unit
     }
 
     /**
-     * @throws
-     *
      * @return void
      */
     public function testAdd(): void

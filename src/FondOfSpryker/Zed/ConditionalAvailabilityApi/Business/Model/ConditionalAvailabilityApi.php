@@ -76,7 +76,6 @@ class ConditionalAvailabilityApi implements ConditionalAvailabilityApiInterface
     /**
      * @param \Generated\Shared\Transfer\ApiDataTransfer $apiDataTransfer
      *
-     * @throws
      * @throws \Spryker\Zed\Api\Business\Exception\EntityNotSavedException
      *
      * @return \Generated\Shared\Transfer\ApiItemTransfer
@@ -111,14 +110,13 @@ class ConditionalAvailabilityApi implements ConditionalAvailabilityApiInterface
      * @param int $id
      * @param \Generated\Shared\Transfer\ApiDataTransfer $apiDataTransfer
      *
-     * @throws
      * @throws \Spryker\Zed\Api\Business\Exception\EntityNotSavedException
-
+     *
      * @return \Generated\Shared\Transfer\ApiItemTransfer
      */
     public function update(int $id, ApiDataTransfer $apiDataTransfer): ApiItemTransfer
     {
-        $conditionalAvailabilityTransfer = $this->getByIdConditionalAvailability($id);
+        $this->getByIdConditionalAvailability($id);
 
         $data = (array)$apiDataTransfer->getData();
 
@@ -129,7 +127,7 @@ class ConditionalAvailabilityApi implements ConditionalAvailabilityApiInterface
         $conditionalAvailabilityResponseTransfer = $this->conditionalAvailabilityFacade
             ->updateConditionalAvailability($conditionalAvailabilityTransfer);
 
-        if ($conditionalAvailabilityTransfer === null || !$conditionalAvailabilityResponseTransfer->getIsSuccessful()) {
+        if (!$conditionalAvailabilityResponseTransfer->getIsSuccessful()) {
             throw new EntityNotSavedException(
                 'Could not save conditional availability.',
                 ApiConfig::HTTP_CODE_INTERNAL_ERROR
@@ -190,8 +188,6 @@ class ConditionalAvailabilityApi implements ConditionalAvailabilityApiInterface
     }
 
     /**
-     * @throws
-     *
      * @return \Generated\Shared\Transfer\PropelQueryBuilderColumnSelectionTransfer
      */
     protected function buildColumnSelection(): PropelQueryBuilderColumnSelectionTransfer
@@ -217,7 +213,7 @@ class ConditionalAvailabilityApi implements ConditionalAvailabilityApiInterface
      *
      * @throws \Symfony\Component\HttpKernel\Exception\NotFoundHttpException
      *
-     * @return array|\Generated\Shared\Transfer\ApiCollectionTransfer
+     * @return \Generated\Shared\Transfer\ApiCollectionTransfer
      */
     protected function addPagination(
         ModelCriteria $query,
@@ -248,8 +244,6 @@ class ConditionalAvailabilityApi implements ConditionalAvailabilityApiInterface
 
     /**
      * @param int $id
-     *
-     * @throws
      *
      * @return \Generated\Shared\Transfer\ApiItemTransfer
      */
@@ -290,8 +284,6 @@ class ConditionalAvailabilityApi implements ConditionalAvailabilityApiInterface
 
     /**
      * @param int $id
-     *
-     * @throws
      *
      * @return \Generated\Shared\Transfer\ApiItemTransfer
      */

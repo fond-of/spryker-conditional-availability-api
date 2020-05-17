@@ -35,8 +35,6 @@ class ConditionalAvailabilityApiBusinessFactory extends AbstractBusinessFactory
     }
 
     /**
-     * @throws
-     *
      * @return \FondOfSpryker\Zed\ConditionalAvailabilityApi\Dependency\Facade\ConditionalAvailabilityApiToConditionalAvailabilityFacadeInterface
      */
     protected function getConditionalAvailabilityFacade(): ConditionalAvailabilityApiToConditionalAvailabilityFacadeInterface
@@ -45,8 +43,6 @@ class ConditionalAvailabilityApiBusinessFactory extends AbstractBusinessFactory
     }
 
     /**
-     * @throws
-     *
      * @return \FondOfSpryker\Zed\ConditionalAvailabilityApi\Dependency\QueryContainer\ConditionalAvailabilityApiToApiQueryContainerInterface
      */
     protected function getApiQueryContainer(): ConditionalAvailabilityApiToApiQueryContainerInterface
@@ -55,8 +51,6 @@ class ConditionalAvailabilityApiBusinessFactory extends AbstractBusinessFactory
     }
 
     /**
-     * @throws
-     *
      * @return \FondOfSpryker\Zed\ConditionalAvailabilityApi\Dependency\QueryContainer\ConditionalAvailabilityApiToApiQueryBuilderQueryContainerInterface
      */
     protected function getApiQueryBuilderQueryContainer(): ConditionalAvailabilityApiToApiQueryBuilderQueryContainerInterface
