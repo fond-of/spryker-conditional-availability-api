@@ -14,7 +14,7 @@ use Spryker\Zed\Kernel\Business\AbstractFacade;
 class ConditionalAvailabilityApiFacade extends AbstractFacade implements ConditionalAvailabilityApiFacadeInterface
 {
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      *
      * @api
      *
@@ -28,7 +28,7 @@ class ConditionalAvailabilityApiFacade extends AbstractFacade implements Conditi
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      *
      * @api
      *
@@ -43,7 +43,7 @@ class ConditionalAvailabilityApiFacade extends AbstractFacade implements Conditi
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      *
      * @api
      *
@@ -57,7 +57,7 @@ class ConditionalAvailabilityApiFacade extends AbstractFacade implements Conditi
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      *
      * @api
      *
@@ -71,7 +71,7 @@ class ConditionalAvailabilityApiFacade extends AbstractFacade implements Conditi
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      *
      * @api
      *
@@ -85,7 +85,7 @@ class ConditionalAvailabilityApiFacade extends AbstractFacade implements Conditi
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      *
      * @api
      *
